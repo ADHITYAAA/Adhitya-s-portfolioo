@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 220 13% 8%;
+    --primary: 250 70% 66%;
+    --border: 220 13% 88%;
+  }
+  .dark {
+    --background: 220 20% 7%;
+    --foreground: 220 13% 95%;
+    --border: 220 20% 18%;
+  }
+  body { @apply bg-background text-foreground antialiased overflow-x-hidden; }
+  html { scroll-behavior: smooth; }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent font-bold;
+  }
+  /* Perfect alignment utility for every section */
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 md:px-12 w-full py-16 md:py-24;
+  }
+}
